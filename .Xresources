@@ -1,0 +1,57 @@
+URxvt.font: xft:Fira Code:size=14
+URxvt.scrollBar: false
+URxvt.depth: 32
+URxvt.background: rgba:0000/0000/0200/c808
+pointer.blank: true
+URxvt.letterSpace: 0 
+!! Colorscheme
+
+! special
+cursorColor: #afbfb00f
+URxvt.foreground: #FF0000
+
+! black
+URxvt.color0: #69656b
+URxvt.color8: #4a697d
+
+! red
+URxvt.color1: #d12f2c
+URxvt.color9: #fa3935
+
+! green
+URxvt.color2: #819400
+URxvt.color10: #a4bd00
+
+! yellow
+URxvt.color3: #b08500
+URxvt.color11: #d9a400
+
+! blue
+URxvt.color4: #2587cc
+URxvt.color12: #2ca2f5
+
+! magenta
+URxvt.color5: #696ebf
+URxvt.color13: #8086e8
+
+! cyan
+URxvt.color6: #289c93
+URxvt.color14: #33c5ba
+
+! white
+URxvt.color7: #bfbaac
+URxvt.color15: #fdf6e3
+
+
+!URxvt.transparent: true
+!URxvt.shading: 70
+!URxvt.blurRadius: 20
+!urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+
+!!dwm color
+!dwm.normbordercolor:#FF6961
+!dwm.normbgcolor: #FF6961
+!dwm.normfgcolor: #000000
+!dwm.selbordercolor: #1696ff
+!dwm.selbgcolor: #1696ff
+!dwm.selfgcolor: #000000
