@@ -10,14 +10,13 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Code:size=10" };
-static const char dmenufont[]       = "Fira Code:size=10";
+static const char dmenufont[]       = "Fira Code:size=1";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-
+static const char *fonts[]          = { "Font Awesome:size=14" };
 
 /* Evangelion Purple one */
 
@@ -35,7 +34,22 @@ static const char col_cyan[]        = "#005577";
 //    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
 //};
 
-/* cool flower one */
+/* lain one */
+static const char norm_fg[] = "#ffe6eb";
+static const char norm_bg[] = "#000000";
+static const char norm_border[] = "#191919";
+
+static const char sel_fg[] = "#ffe6eb";
+static const char sel_bg[] = "#A78A7A";
+static const char sel_border[] = "#ffe6eb";
+
+static const char *colors[][3]      = {
+    /*               fg           bg         border                         */
+    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+};
+/* cool flower one 
+
 
 static const char norm_fg[] = "#d7a6c3";
 static const char norm_bg[] = "#0D1E27";
@@ -47,11 +61,12 @@ static const char sel_border[] = "#d7a6c3";
 
 
 static const char *colors[][3]      = {
-    /*               fg           bg         border                         */
+    //               fg           bg         border                         
     [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
     [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
 };
 
+*/
 // forst steps one
 /*
 static const char norm_fg[] = "#b3baba";
@@ -92,7 +107,6 @@ static const char *colors[][3]      = {
 static const char norm_fg[] = "#b1bbbd";
 static const char norm_bg[] = "#090d11";
 static const char norm_border[] = "#7b8284";
-
 static const char sel_fg[] = "#b1bbbd";
 static const char sel_bg[] = "#30294D";
 static const char sel_border[] = "#b1bbbd";
@@ -127,12 +141,39 @@ static const char *colors[][3]      = {
 //    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
 //};
 
+// Red blue abstract
+/*static const char norm_fg[] = "#82cce6";
+static const char norm_bg[] = "#0d1018";
+static const char norm_border[] = "#5b8ea1";
 
+static const char sel_fg[] = "#82cce6";
+static const char sel_bg[] = "#cb1d2e";
+static const char sel_border[] = "#82cce6";
 
+static const char *colors[][3]      = {
+     //              fg           bg         border                         
+    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+};*/
+// ice mounatain
+
+//static const char norm_fg[] = "#d7d8d6";
+//static const char norm_bg[] = "#0C0C0B";
+//static const char norm_border[] = "#969795";
+//
+//static const char sel_fg[] = "#d7d8d6";
+//static const char sel_bg[] = "#86857B";
+//static const char sel_border[] = "#d7d8d6";
+//
+//static const char *colors[][3]      = {
+//    /*               fg           bg         border                         */
+//    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+//    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+//};
 
 /* tagging */
-static const char *tags[] = { "0x01", "0x02", "0x03", "0x04", "0x05", "0x06", "0x07", "0x08", "0x09" };
-static const char *alttags[] = { "<0x01>", "<0x02>", "<0x03>", "<0x04>", "<0x05>", "<0x06>", "<0x07>", "<0x08>", "<0x09>"};
+static const char *tags[] = { "", "2", "", "4", "5", "6", "7", "8", "9" };
+static const char *alttags[] = { "<  >", "< 2 >", "<  >", "< 4 > ", "< 5 >", "< 6 >", "< 7 >", "< 8 >", "< 9 >"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -187,7 +228,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
-static const char *rofi[]     = { "rofi" , "-show" , "run", "-theme", "/home/dylandy/.config/rofi/themes/colors-rofi-light.rasi" };
+static const char *rofi[]     = { "rofi" , "-show" , "run", "-theme", "/home/dylandy/.cache/wal/colors-rofi-light.rasi" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
