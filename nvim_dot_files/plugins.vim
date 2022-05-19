@@ -24,4 +24,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'valloric/youcompleteme'
     Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --tern-completer' }
     Plug 'arakashic/chromatica.nvim'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     call plug#end()
