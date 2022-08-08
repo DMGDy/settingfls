@@ -8,6 +8,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/dylandy/.zshrc'
+[[ $- != *i* ]] && return>/dev/null
 
 autoload -Uz compinit
 compinit
@@ -17,29 +18,28 @@ alias ls='ls --color=auto'
  #PS1='[\u@\h \W]\$ '
 
 # ALiases
-alias f='firefox & disown'
-alias d='discord & disown'
-alias chr='chromium & disown>/dev/null' 
-alias zz='zathura'
-alias di='bash Digita1/Digital/Digital.sh & disown'
 alias shutdown='sudo shutdown -h now'
 alias vxinitrc='sudo nvim /etc/X11/xinit/xinitrc' 
-alias Digital='bash Digita1/Digital/Digital.sh & disown'
 alias vbox='virtualbox & disown'
 alias sync-time='sudo ntpd -qg'
 alias tmux='TERM=xterm-256color tmux'
 alias sync-hw='sudo hwclock -w'
-alias discordo='cd .config/more_programs/discordo && ./discordo'
 alias show_battery='cat /sys/class/power_supply/CMB0/capacity'
 alias color_test='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 alias betterpywal='wpg'
+alias cat='bat'
 #Functions
 
-#wal -a 80 -i /home/dylandy/Wallpapers/Pictures/wallpapers/walls/colorful-flowers.jpg>/dev/null
+#wal -a 60 -i /home/dylandy/Pictures/finalwal-edit.jpg
 # 
 wal -R>/dev/null
 
-pfetch
+
+#pfetch
+
+neofetch --image_size none --kitty ~/Pictures/edgy-anime-pfp-yumeko-jabami.jpg
+
+
 export TERM=kitty
 
 
@@ -107,8 +107,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 
 
-
-
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source ~/.config/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
