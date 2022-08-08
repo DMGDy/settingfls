@@ -64,9 +64,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  { username, "%s || ",NULL },
-  { ram_used,    "RAM: %sb  | ",NULL    },
-	{ cpu_perc,   "CPU: %s%%  | ",NULL 		},
-	{ cpu_freq,  "Speed: %sHz | ",	NULL },
-  { datetime,     "%s",           "%F %T" },
+  { ipv4,     "IPv4: %s|| ", "eth0"},
+  { username, "%s || ",NULL },
+  { ram_used,    "RAM: %sb  | ",NULL    },
+	{ cpu_perc,   "CPU: %s%%  | ",NULL 		},
+	{ cpu_freq,  "龍Speed: %sHz | ",	NULL },
+  { datetime,     "﨟%s",           "%F %T" },
 }; 
