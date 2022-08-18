@@ -28,16 +28,22 @@ alias show_battery='cat /sys/class/power_supply/CMB0/capacity'
 alias color_test='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 alias betterpywal='wpg'
 alias cat='bat'
+
+#useful shortcuts
+export XINITRC=/etc/X11/xinit/xinitrc
+
 #Functions
 
-#wal -a 60 -i /home/dylandy/Pictures/finalwal-edit.jpg
-# 
+export PATH=$PATH:/home/dylandy/.local/bin/:/home/dylandy/Scripts
+
+#wal -a 60 -i /home/dylandy/Pictures/warty-final-ubuntu.png
+ 
 wal -R>/dev/null
 
 
-#pfetch
+pfetch
 
-neofetch --image_size none --kitty ~/Pictures/edgy-anime-pfp-yumeko-jabami.jpg
+#neofetch --image_size none --kitty ~/Pictures/edgy-anime-pfp-yumeko-jabami.jpg
 
 
 export TERM=kitty
@@ -53,7 +59,7 @@ setopt PROMPT_SUBST
 autoload -U colors && colors
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 local user_host="%B%(!.%{$fg[red]%}.%{$fg[green]%})%n@%m%{$reset_color%} "
-local user_symbol=''
+local user_symbol='  '
 local current_dir="%B%{$fg[blue]%}%~ %{$reset_color%}"
 
 local vcs_branch='$(git_prompt_info)$(hg_prompt_info)'
@@ -107,7 +113,14 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source ~/.config/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/fzf-tab/fzf-tab.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#setopt -s direxpand
+export SOLUTIONS=$HOME/LFT/LFD460/SOLUTIONS
+export RESOURCES=$HOME/LFT/LFD460/RESOURCES
+export LABS=$HOME/labs
+export BBDIR="$LABS/bitbake-1.52"
+export PATH="$PATH:$BBDIR/bin"
+export YOCTODIR="$LABS/yocto"
+export POKYDIR="$YOCTODIR/poky-honister"
